@@ -10,9 +10,16 @@ import java.sql.SQLException;
 
 public class SqlHelper {
 
+//    public static Connection getConnection() throws SQLException {
+//        final Connection connection = DriverManager.getConnection(
+//                "jdbc:mysql://localhost:3306/app", "app", "pass");
+//        return connection;
+//    }
+
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(
                 System.getProperty("url"),
+//                System.getProperty("db.url"),
                 System.getProperty("db.login"),
                 System.getProperty("db.password")
         );
@@ -20,7 +27,6 @@ public class SqlHelper {
 
     @SneakyThrows
     public static void deleteTables() {
-//        Class.forName("com.example.jdbc.Driver");
         val creditRequest = "DELETE FROM credit_request_entity";
         val order = "DELETE FROM order_entity";
         val payment = "DELETE FROM payment_entity";
@@ -35,7 +41,6 @@ public class SqlHelper {
 
     @SneakyThrows
     public static String getStatusCreditRequestEntity() {
-//        Class.forName("com.example.jdbc.Driver");
         try (val conn = getConnection();
              val countStmt = conn.createStatement()) {
             val sql = "SELECT status FROM credit_request_entity ORDER BY created DESC LIMIT 1;";
@@ -49,7 +54,6 @@ public class SqlHelper {
 
     @SneakyThrows
     public static String getStatusPaymentEntity() {
-//        Class.forName("com.example.jdbc.Driver");
         try (val conn = getConnection();
              val countStmt = conn.createStatement()) {
             val sql = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1;";

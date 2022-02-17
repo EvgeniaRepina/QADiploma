@@ -10,7 +10,7 @@ services:
       - MYSQL_USER=app
       - MYSQL_PASSWORD=pass
   postgresdb:
-    image: postgres:latest
+    image: postgres:13.2
     ports:
       - '5432:5432'
     environment:
