@@ -16,7 +16,7 @@
 ```
 docker-compose up -d
 ```
-####MySQl
+#### MySQl
 2. Запустить SUT, работающей на СУБД MySQl:
 ```
 java -D:spring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa-shop.jar
@@ -32,14 +32,14 @@ java -D:spring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa
    ```
 5. Закрыть терминал с SUT.
 
-####PostgreSQL
+#### PostgreSQL
 1. Запустить SUT, работающей на СУБД PostgreSQL:
-```java -D:spring.datasource.
-   url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
+```
+java -D:spring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
    ```
 2. В новом терминале запустить автотесты для PostgreSQL:
-```./gradlew clean test 
-   -Durl=jdbc:postgresql://localhost:5432/app
+```
+./gradlew clean test -Durl=jdbc:postgresql://localhost:5432/app
    ```
 3. Сгенерировать отчет:
 ``` 
