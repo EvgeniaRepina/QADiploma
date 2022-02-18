@@ -1,4 +1,4 @@
-##  Процедура запуска авто-тестов
+##  Процедура запуска автотестов
 ### Подготовка:
 1. Установить:
 * [Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -10,7 +10,7 @@
 * docker image pull postgres:13.2
 * docker image pull node:8
 
-### Запуск авто-тестов:
+### Запуск автотестов:
 
 1. Запустить контейнеры СУБД MySQl, PostgerSQL и Node.js в терминале:
 ```
