@@ -46,5 +46,5 @@ java -D:spring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifact
 ./gradlew allureReport
 ./gradlew allureServe
 ```
-5. Закрыть все терминалы.
-6. Остановить и удалить все контейнеры.
+4. Закрыть все терминалы.
+5. Остановить и удалить все контейнеры.
