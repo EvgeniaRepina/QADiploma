@@ -33,18 +33,18 @@ java -D:spring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa
 5. Закрыть терминал с SUT.
 
 #### PostgreSQL
-1. Запустить SUT, работающей на СУБД PostgreSQL:
+6. Запустить SUT, работающей на СУБД PostgreSQL:
 ```
 java -D:spring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
    ```
-2. В новом терминале запустить автотесты для PostgreSQL:
+7. В новом терминале запустить автотесты для PostgreSQL:
 ```
 ./gradlew clean test -Durl=jdbc:postgresql://localhost:5432/app
    ```
-3. Сгенерировать отчет:
+8. Сгенерировать отчет:
 ``` 
 ./gradlew allureReport
 ./gradlew allureServe
 ```
-4. Закрыть все терминалы.
-5. Остановить и удалить все контейнеры.
+9. Закрыть все терминалы.
+10. Остановить и удалить все контейнеры.
